@@ -8,7 +8,10 @@ const router = Router()
 
 router.get('/', isSignedIn, songsCtrl.index)
 router.get('/:songId', songsCtrl.show)
+router.get('/:songId/edit', isSignedIn, songsCtrl.edit)
 router.post('/', isSignedIn, songsCtrl.create)
+router.put('/:songId', isSignedIn, songsCtrl.update)
+router.delete('/:songId', isSignedIn, songsCtrl.delete)
 
 
 export { router }
