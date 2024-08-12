@@ -2,6 +2,16 @@ import mongoose from "mongoose"
 
 const Schema = mongoose.Schema
 
+const commentSchema = new Schema({
+  content: {
+    type: String
+  },
+  addSong: {
+    type: Boolean,
+    required: true
+  }
+})
+
 const songSchema = new Schema({
   title: {
     type: String,
@@ -23,7 +33,8 @@ const songSchema = new Schema({
     type: Number,
     min: 1,
     max: 10,
-  }
+  },
+  comments: [commentSchema]
 })
 
 const Song = mongoose.model('Song', songSchema)
