@@ -1,7 +1,19 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<h1>This is <%= selectedUser.username %>'s Profile Page</h1>
 
-<h1>Here is the profile you picked thats not yours</h1>
+<section>
+  <h1><%= selectedUser.username %>'s Songs</h1>
+  <ul>
+    <% songs.forEach( song => { %>
+      <% if(song.owner.equals(selectedUser?._id)) { %>
+      <li>
+        <a href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a>
+      </li>
+      <% } %>
+      <% })  %>
+  </ul>
+</section>
 
 <%- include('../partials/footer') %>

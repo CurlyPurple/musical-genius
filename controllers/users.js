@@ -21,7 +21,8 @@ async function show(req, res) {
   })
 } else {
   res.render('songs/difprofile', {
-    songs
+    songs,
+    selectedUser
   })
 }
 }
