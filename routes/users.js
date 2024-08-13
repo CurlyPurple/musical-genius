@@ -9,6 +9,7 @@ const router = Router()
 router.get('/:userId', usersCtrl.show)
 
 // protected routes
+router.get('/:userId/entourage', usersCtrl.indexE)
 router.get('/', isSignedIn, usersCtrl.index)
 
 export { router }

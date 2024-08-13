@@ -86,5 +86,5 @@ export {
   show,
   edit,
   update,
-  deleteSong as delete
+  deleteSong as delete,
 }
