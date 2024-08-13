@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <p>From the Studio of <%= song.owner %></p>
+  <p>From the Studio of <%= song.owner.username %></p>
   <h1><%= song.title %></h1> 
   <h1><%= song.artist %></h1>
     <a href="/songs/<%= song._id %>/edit">

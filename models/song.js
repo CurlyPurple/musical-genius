@@ -34,10 +34,10 @@ const songSchema = new Schema({
     min: 1,
     max: 10,
   },
-  comments: [commentSchema],
   owner: {
     type: Schema.Types.ObjectId, ref: 'User'
   },
+  comments: [commentSchema],
 })
 
 const Song = mongoose.model('Song', songSchema)

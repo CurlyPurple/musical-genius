@@ -1,4 +1,5 @@
 import { Song } from "../models/song.js"
+import { User } from "../models/user.js"
 
 async function index(req,res) {
   try {

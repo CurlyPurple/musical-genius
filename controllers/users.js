@@ -1,4 +1,5 @@
 import { User } from "../models/user.js"
+import { Song } from "../models/song.js"
 
 async function index(req, res) {
   const users = await User.find({})

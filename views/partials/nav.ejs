@@ -2,8 +2,10 @@
 <body>
   <nav>
     <% if (user) { %>
-      <a href="/songs">Songs</a>
-      <a href="/users">Profiles</a>
+      <a href="/users/<%= user._id %>">My Profile</a>
+      <a href="">Entourage</a>
+      <a href="/songs">Discover Songs</a>
+      <a href="/users">Geniuses</a>
       <a href="/auth/sign-out">Sign Out</a>
     <% } else { %>
       <a href="/auth/sign-up">Sign Up</a>
