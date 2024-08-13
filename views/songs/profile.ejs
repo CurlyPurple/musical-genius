@@ -3,6 +3,34 @@
 
 <h1>This is your profile page <%= selectedUser.username %></h1>
 
+<main>
+  <form id="new-song" action="/songs" method="POST">
+    <label for="album-cover-input">Add Album Cover Image</label>
+    <input type="text" name="albumCover" id="album-cover-input"><br>
+    <label for="title-input">Add Song Title:</label>
+    <input type="text" name="title" id="title-input"><br>
+    <label for="artist-input">Add Artist</label>
+    <input type="text" name="artist" id="artist-input"><br>
+    <label for="word-association-input">One word for how this song makes you feel:</label>
+    <input type="text" name="wordAssociation" id="word-association-input"><br>
+    <label for="rank-input">How much do you enjoy this song? (Choose number between 1-10)</label>
+    <input type="number" name="rank" id="rank-input" min="1" max="10"> <br>
+    <button type="submit">Add Song</button>
+  </form>
+</main>
+
+<section>
+  <h1>My Songs</h1>
+  <ul>
+    <% songs.forEach( song => { %>
+      <% if(song.owner.equals(user?._id)) { %>
+      <li>
+        <a href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a>
+      </li>
+      <% } %>
+      <% })  %>
+  </ul>
+</section>
 
 <h2>You made it!</h2>
 <%- include('../partials/footer') %>

@@ -9,12 +9,12 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  const song = await Song.findById(req.params.songId)
+  const songs = await Song.find({})
   .populate('owner')
   const selectedUser = await User.findById(req.params.userId)
   res.render('songs/profile', {
     selectedUser,
-    song
+    songs
   })
 }
 
