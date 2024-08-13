@@ -5,12 +5,14 @@
   <p>From the Studio of <%= song.owner.username %></p>
   <h1><%= song.title %></h1> 
   <h1><%= song.artist %></h1>
+  <% if (song.owner.equals(user?._id)) { %>
     <a href="/songs/<%= song._id %>/edit">
       <button class="btn">Edit Song</button>
     </a>
     <form action="/songs/<%= song._id %>?_method=DELETE" method="POST">
       <button type="submit" class="btn">X</button>
     </form>
+    <% } %>
 </section>
 
 <%- include('../partials/footer') %>
