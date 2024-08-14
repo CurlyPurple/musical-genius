@@ -2,8 +2,13 @@
 <%- include('../partials/nav') %>
 
 <h1>All Geniuses</h1>
+
+<section class="genius">
 <% users.forEach(u => { %>
-  <h4><a href="/users/<%= u._id %>"><%= u.username %></a></h4>
+  <div>
+  <h4><a style="text-decoration:none" class="profile" href="/users/<%= u._id %>"><%= u.username %></a></h4>
+</div>
 <% }) %>
+</section>
 
 <%- include('../partials/footer') %>

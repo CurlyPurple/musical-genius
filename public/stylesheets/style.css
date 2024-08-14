@@ -6,3 +6,46 @@ body {
 a {
   color: #00B7FF;
 }
+
+nav {
+  background-color: #f6f6f6;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 30px;
+}
+
+nav > a {
+  margin: 8px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div {
+  width: 18%;
+  height: 20%;
+  background-color: black;
+  border-radius: 50%;
+  margin: 5px;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: smaller;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+}
+
+.genius {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
