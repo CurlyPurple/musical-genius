@@ -7,7 +7,7 @@ const router = Router()
 // protected routes
 
 router.get('/', isSignedIn, songsCtrl.index)
-router.get('/:songId', songsCtrl.show)
+router.get('/:songId', isSignedIn, songsCtrl.show)
 router.get('/:songId/edit', isSignedIn, songsCtrl.edit)
 router.post('/', isSignedIn, songsCtrl.create)
 router.post('/:songId/comments', isSignedIn, songsCtrl.addComment)

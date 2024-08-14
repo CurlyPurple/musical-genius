@@ -1,3 +1,5 @@
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -27,11 +29,12 @@ nav > a {
   justify-content: center;
 }
 .person {
-  width: 18%;
-  height: 20%;
+  width: 125px;
+  height: 200px;
   background-color: black;
-  border-radius: 50%;
   margin: 5px;
+  border-radius: 5px 30px 5px 30px;
+  box-shadow: 10px 10px 5px lightblue;
 }
 .profile {
   display: flex;
@@ -41,8 +44,12 @@ nav > a {
 }
 
 h1 {
-  position: relative;
   text-align: center;
+}
+
+h2 {
+  text-align: center;
+  height: 30px;
 }
 
 .genius {
@@ -51,26 +58,52 @@ h1 {
   flex-wrap: wrap;
 }
 
-.record {
-  background: red;
+.outer-circle {
+  background: black;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  box-shadow: 0 0 0 40px black;
-  margin: 60px -10px 30px 30px;
-  font-size: 12px;
-  text-align: right;
-  position: relative;
+  height: 100px;
+  width: 100px;
 }
 
-.record:hover {
+.record {
+  position: relative;
+  background: red;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  top: 30%;
+  left: 30%;
+}
+
+.word-appear {
+  block-size: fit-content;
+  display: none;
+  position: absolute;
+  text-align: center;
+}
+
+.record:hover + .word-appear {
   background-color: yellow;
+  display: flex;
+  position: fixed;
+  top: 35%;
+  left: 30%;
+
+}
+
+.record:hover + h1{
+  display: none;
 }
 
 .store {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+
+span {
+  display: inline-block;
+  font-size: smaller;
 }
 
 #song-form {
@@ -83,4 +116,9 @@ h1 {
 
 p {
   text-align: center;
+}
+
+.All {
+  text-shadow: 0 2px whitesmoke;
+  font-weight: bold;
 }

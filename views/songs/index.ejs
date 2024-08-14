@@ -1,15 +1,22 @@
+<h1>Discover Songs</h1>
 <%- include('../partials/html-head') %>
 
 <%- include('../partials/nav') %>
 
-<h1>Discover Songs</h1>
-
+<h2>Click on center of record to find out more</h2>
+<h2></h2>
 <section class="store">
     <% songs.forEach( song => { %>
+      <a style="text-decoration: none;" href="/songs/<%= song._id %>">
+      <div class="outer-circle">
       <div class="record">
         <br>
-        <a  style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %></a> <br>
       </div>
+      <div class="word-appear">
+      <h1><%= song.title %> - <%= song.artist %></h1>
+      </div>
+    </div>
+  </a>
       <% })  %>
 </section>
 
