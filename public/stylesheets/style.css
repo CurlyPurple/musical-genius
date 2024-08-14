@@ -5,6 +5,7 @@ body {
 
 a {
   color: #00B7FF;
+  margin-top: 10px
 }
 
 nav {
@@ -53,10 +54,13 @@ h1 {
 .record {
   background: red;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  box-shadow: 0 0 0 30px black;
-  margin: auto;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 0 0 40px black;
+  margin: 60px -10px 30px 30px;
+  font-size: 12px;
+  text-align: right;
+  position: relative;
 }
 
 .record:hover {
@@ -66,6 +70,13 @@ h1 {
 .store {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+}
 
-  margin: 100px;
+#song-form {
+  width: 200px;
+  height: 300px;
+  border-width: 250px;
+  border-color: black;
+  text-align: center;
 }
