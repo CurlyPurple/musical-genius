@@ -1,16 +1,16 @@
 <%- include('../partials/html-head') %>
+
 <%- include('../partials/nav') %>
 
+<h1>Songs</h1>
 
-<section>
-  <h1>Songs</h1>
-  <ul>
+<section class="store">
     <% songs.forEach( song => { %>
-      <li>
-        <a href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a>
-      </li>
+      <div class="record">
+        <a  style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a> <br>
+      </div>
       <% })  %>
-  </ul>
 </section>
+
 
 <%- include('../partials/footer') %>

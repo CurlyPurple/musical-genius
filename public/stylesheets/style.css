@@ -25,7 +25,7 @@ nav > a {
   align-items: center;
   justify-content: center;
 }
-div {
+.person {
   width: 18%;
   height: 20%;
   background-color: black;
@@ -48,4 +48,24 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.record {
+  background: red;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  box-shadow: 0 0 0 30px black;
+  margin: auto;
+}
+
+.record:hover {
+  background-color: yellow;
+}
+
+.store {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 100px;
 }
