@@ -30,10 +30,13 @@ async function create(req,res) {
 
 async function show(req,res) {
   try {
+    const selectedUser = await User.findById(req.params.userId)
     const song = await Song.findById(req.params.songId)
     .populate('owner')
+    .populate('comments.author')
     res.render('songs/show', {
-      song
+      song,
+      selectedUser
     })
   } catch (error) {
     console.log(error)
@@ -83,6 +86,19 @@ async function deleteSong(req,res) {
   }
 }
 
+async function addComment(req,res) {
+  try {
+    const song = await Song.findById(req.params.songId)
+    req.body.author = req.session.user._id
+    song.comments.push(req.body)
+    await song.save()
+    res.redirect(`/songs/${song._id}`)
+  } catch (error) {
+    console.log(error)
+    res.redirect('/songs')
+  }
+}
+
 export {
   index,
   create,
@@ -90,4 +106,5 @@ export {
   edit,
   update,
   deleteSong as delete,
+  addComment,
 }

@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+import mongoose, { SchemaType } from "mongoose"
 
 const Schema = mongoose.Schema
 
@@ -6,10 +6,9 @@ const commentSchema = new Schema({
   content: {
     type: String
   },
-  addSong: {
-    type: Boolean,
-    required: true
-  }
+  author: {type: Schema.Types.ObjectId, ref: 'User'},
+},{
+    timestamps: true
 })
 
 const songSchema = new Schema({
@@ -34,10 +33,12 @@ const songSchema = new Schema({
     min: 1,
     max: 10,
   },
-  owner: {
-    type: Schema.Types.ObjectId, ref: 'User'
-  },
-  comments: [commentSchema],
+  owner: 
+    {type: Schema.Types.ObjectId, ref: 'User'}
+  ,
+  comments: [commentSchema]
+}, {
+  timestamps: true
 })
 
 const Song = mongoose.model('Song', songSchema)
