@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <p>From the Studio of <%= song.owner.username %></p>
+  <p>From the Collection of <%= song.owner.username %></p>
   <h1><%= song.title %></h1> 
   <h1><%= song.artist %></h1>
   <% if (song.owner.equals(user?._id)) { %>
