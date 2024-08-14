@@ -34,8 +34,16 @@ async function indexE(req,res) {
   })
 }
 
+// async function addFriend(req,res) {
+//   const selectedUser = await User.findById(req.params.userId)
+//   req.body.friend = req.session.user._id
+//   selectedUser.friends.push(req.body.friend)
+//     await selectedUser.save()
+// }
+
 export {
   index,
   show,
-  indexE
+  indexE,
+  // addFriend
 }

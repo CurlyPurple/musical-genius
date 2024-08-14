@@ -9,7 +9,8 @@ const router = Router()
 router.get('/:userId', usersCtrl.show)
 
 // protected routes
-router.get('/:userId/entourage', usersCtrl.indexE)
+router.get('/:userId/entourage', isSignedIn, usersCtrl.indexE)
 router.get('/', isSignedIn, usersCtrl.index)
+// router.post('/:userId/friend', isSignedIn, songsCtrl.addFriend)
 
 export { router }
