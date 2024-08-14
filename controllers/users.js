@@ -9,11 +9,14 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  console.log(req.session.user._id);
-  
   const songs = await Song.find({})
   .populate('owner')
+  console.log(req.session.user);
   const selectedUser = await User.findById(req.params.userId)
+  const selectedId = req.params.userId
+  console.log(selectedId);
+  
+  
   if (selectedUser.equals(req.session.user._id)) {
   res.render('songs/profile', {
     selectedUser,
@@ -22,7 +25,8 @@ async function show(req, res) {
 } else {
   res.render('songs/difprofile', {
     songs,
-    selectedUser
+    selectedUser,
+    selectedId
   })
 }
 }

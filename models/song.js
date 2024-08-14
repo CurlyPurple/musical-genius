@@ -21,20 +21,16 @@ const songSchema = new Schema({
     required: true
   },
   wordAssociation: {
-    type: String,
+    type: [String],
     required: true
   },
-  albumCover: {
-    type: String,
-    default: "URL String of app Logo"
-  },
   rank: {
-    type: Number,
+    type: [Number],
     min: 1,
-    max: 10,
+    max: 5,
   },
   owner: 
-    {type: Schema.Types.ObjectId, ref: 'User'}
+    [{type: Schema.Types.ObjectId, ref: 'User'}]
   ,
   comments: [commentSchema]
 }, {
