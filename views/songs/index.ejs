@@ -1,18 +1,20 @@
-<h1>Discover Songs</h1>
 <%- include('../partials/html-head') %>
-
 <%- include('../partials/nav') %>
 
-<h2>Click on song to find out more</h2>
+<h2>Discover Songs</h2>
+<h3>Click on a song to find out more</h3>
 <section class="store">
     <% songs.forEach( song => { %>
+      <% if(!(song.owner.equals(user?._id))) { %>
       <a style="text-decoration: none;" href="/songs/<%= song._id %>">
       
     
       <%= song.title %> - <%= song.artist %>
       
   </a>|
+  <% } %>
       <% })  %>
+      
 </section>
 
 <%- include('../partials/footer') %>

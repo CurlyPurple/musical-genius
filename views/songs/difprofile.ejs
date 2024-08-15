@@ -3,9 +3,6 @@
 
 <h1><%= selectedUser.username %>'s Profile Page</h1>
 <section>
-<form class="friend" action="/users/<%= user._id %>/entourage" method="POST">
-  <button type="submit">Add Friend</button>
-</form>
 <% songs.forEach( song => { %>
   <% if(song.owner.equals(selectedUser?._id)) { %>
     <div class="association"><a style="text-decoration: none;" href="/songs/<%= song._id %>"><h(<%= song.rank %>)><%= song.wordAssociation %></h(<%= song.rank %>)></a></div><br>
