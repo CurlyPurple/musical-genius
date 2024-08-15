@@ -2,8 +2,9 @@
 <%- include('../partials/nav') %>
 
 <h1>This is <%= selectedUser.username %>'s Profile Page</h1>
-
+<form action="/users/<%= user._id %>/entourage" method="POST">
   <button type="submit">Add Friend</button>
+</form>
 
 
 

@@ -99,6 +99,58 @@ async function addComment(req,res) {
   }
 }
 
+async function editComment(req,res) {
+  try {
+    const song = await Song.findById(req.params.songId)
+    const comment = song.comments.id(req.params.commentId)
+    if (comment.author.equals(req.session.user._id)) {
+      res.render('songs/editComment', {
+        song,
+        comment
+      })
+    } else {
+      throw new Error('Not your Comment')
+    }
+  } catch (error) {
+    console.log(error)
+    res.redirect('/songs')
+  }
+}
+
+async function updateComment(req,res) {
+  try {
+    const song = await Song.findById(req.params.songId)
+    const comment = song.comments.id(req.params.commentId)
+    if (comment.author.equals(req.session.user._id)) {
+      comment.set(req.body) 
+      await song.save()
+      res.redirect(`/songs/${song._id}`)
+    } else {
+      throw new Error('Cant update comment that isnt yours')
+    }
+  } catch (error) {
+    console.log(error)
+    res.redirect('/songs')
+  }
+}
+
+async function deleteComment(req,res) {
+  try {
+    const song = await Song.findById(req.params.songId)
+    const comment = song.comments.id(req.params.commentId)
+    if (comment.author.equals(req.session.user._id)) {
+      song.comments.remove(comment)
+      await song.save()
+      res.redirect(`/songs/${song._id}`)
+    } else {
+      throw new Error('Cant delete comment that isnt yours')
+    }
+  } catch (error) {
+    console.log(error)
+    res.redirect('/songs')
+  }
+}
+
 export {
   index,
   create,
@@ -107,4 +159,7 @@ export {
   update,
   deleteSong as delete,
   addComment,
+  editComment,
+  updateComment,
+  deleteComment,
 }

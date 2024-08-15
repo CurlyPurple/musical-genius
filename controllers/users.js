@@ -16,7 +16,6 @@ async function show(req, res) {
   const selectedId = req.params.userId
   console.log(selectedId);
   
-  
   if (selectedUser.equals(req.session.user._id)) {
   res.render('songs/profile', {
     selectedUser,
@@ -38,16 +37,19 @@ async function indexE(req,res) {
   })
 }
 
-// async function addFriend(req,res) {
-//   const selectedUser = await User.findById(req.params.userId)
-//   req.body.friend = req.session.user._id
-//   selectedUser.friends.push(req.body.friend)
-//     await selectedUser.save()
+// async function showFriend(req,res) {
+//   const selectedUser = req.session.user
+//   req.body.friend = req.session.user.username
+//   selectedUser.friends.push(req.body)
+//   await selectedUser.save()
+//   res.render('songs/entourage', {
+//     selectedUser
+//   })
 // }
 
 export {
   index,
   show,
   indexE,
-  // addFriend
+  // showFriend
 }

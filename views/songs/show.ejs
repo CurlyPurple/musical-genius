@@ -23,12 +23,24 @@
 </section>
 
 <h2>Comments</h2>
+<% if (song.comments.length) { %>
 <ul>
   <% song.comments?.forEach(comment => { %>
     <li>
       <%= comment.content %> - <a href="/users/<%= comment.author._id %>"><%= comment.author.username %></a>
+      <% if (comment.author.equals(user?._id)) { %>
+        <form action="/songs/<%= song._id %>/<%= comment._id %>?_method=DELETE" method="POST">
+          <button class="btn" type="submit">X</button>
+        </form>
+        <a href="/songs/<%= song._id %>/<%= comment._id %>/edit">
+          <button class="btn">Edit Comment</button>
+        </a>
+        <% } %>
     </li> 
   <% }) %>
 </ul>
+<% } else { %>
+  <h3>Be the first to comment on <%= song.title %> by <%= song.artist %></h3>
+  <% } %>
 
 <%- include('../partials/footer') %>
