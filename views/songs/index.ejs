@@ -3,20 +3,15 @@
 
 <%- include('../partials/nav') %>
 
-<h2>Click on center of record to find out more</h2>
-<h2></h2>
+<h2>Click on song to find out more</h2>
 <section class="store">
     <% songs.forEach( song => { %>
       <a style="text-decoration: none;" href="/songs/<%= song._id %>">
-      <div class="outer-circle">
-      <div class="record">
-        <br>
-      </div>
-      <div class="word-appear">
-      <h1><%= song.title %> - <%= song.artist %></h1>
-      </div>
-    </div>
-  </a>
+      
+    
+      <%= song.title %> - <%= song.artist %>
+      
+  </a>|
       <% })  %>
 </section>
 

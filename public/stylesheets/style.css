@@ -3,11 +3,16 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 a {
   color: #00B7FF;
   margin-top: 10px
+}
+
+.friend {
+  text-align: center;
 }
 
 nav {
@@ -58,48 +63,6 @@ h2 {
   flex-wrap: wrap;
 }
 
-.outer-circle {
-  background: black;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-}
-
-.record {
-  position: relative;
-  background: red;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  top: 30%;
-  left: 30%;
-}
-
-.word-appear {
-  block-size: fit-content;
-  display: none;
-  position: absolute;
-  text-align: center;
-}
-
-.record:hover + .word-appear {
-  background-color: yellow;
-  display: flex;
-  position: fixed;
-  top: 35%;
-  left: 30%;
-
-}
-
-.record:hover + h1{
-  display: none;
-}
-
-.store {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
 
 span {
   display: inline-block;

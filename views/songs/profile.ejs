@@ -23,9 +23,7 @@
   <ul>
     <% songs.forEach( song => { %>
       <% if(song.owner.equals(user?._id)) { %>
-      <li>
-        <a href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a>
-      </li>
+        <a href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a>|
       <% } %>
       <% })  %>
   </ul>
