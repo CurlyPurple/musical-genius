@@ -11,6 +11,35 @@ a {
   margin-top: 10px
 }
 
+.auth {
+  display: flex;
+  flex-direction: column;
+}
+
+.signUp {
+  border: solid;
+  width: 38vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.signIn {
+  border: solid;
+  width: 30vw;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 5%;
+}
+
 .friend {
   text-align: center;
 }

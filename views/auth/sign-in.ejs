@@ -2,13 +2,16 @@
 <h1>Musical Genius</h1>
 <%- include('../partials/nav') %>
 
+<section class="signIn">
 <form class="auth" action="/auth/sign-in" method="POST">
   <h1>Sign in</h1>
   <label for="username">Username:</label>
   <input type="text" name="username" id="username" />
+  <br>
   <label for="password">Password:</label>
   <input type="password" name="password" id="password" />
+  <br>
   <button type="submit">Sign in</button>
 </form>
-
+</section>
 <%- include('../partials/footer') %>
