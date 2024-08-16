@@ -2,17 +2,21 @@
 <%- include('../partials/nav') %>
 
 <main>
+  <h1>Edit your Song</h1>
+  <div class="editSong">
   <form id="new-song" action="/songs/<%= song._id %>?_method=PUT" method="POST">
     <label for="title-input">Add Song Title:</label>
     <input type="text" name="title" id="title-input" value="<%= song.title %>"><br>
     <label for="artist-input">Add Artist</label>
     <input type="text" name="artist" id="artist-input" value="<%= song.artist %>"><br>
-    <label for="word-association-input">One word for how this song makes you feel:</label>
+    <label for="word-association-input">Emotion for song (One Word):</label>
     <input type="text" name="wordAssociation" id="word-association-input" value="<%= song.wordAssociation %>"><br>
     <label for="rank-input">Rank this song? (1 is ranked best)</label>
-    <input type="number" name="rank" id="rank-input" min="1" max="10" value="<%= song.rank %>"> <br>
-    <button type="submit">Edit Song</button>
+    <input type="number" name="rank" id="rank-input" min="1" max="5" value="<%= song.rank %>"> <br>
+    <br>
+    <button class="btn" type="submit">Edit Song</button>
   </form>
+</div>
 </main>
 
 <%- include('../partials/footer') %>
