@@ -1,48 +1,60 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
-  <p>From the Collection of <%= song.owner.username %></p>
-  <h1><%= song.title %></h1> 
-  <h1><%= song.artist %></h1>
-  <h2>Emotion: <%= song.wordAssociation %></h2>
-  <h2>Rank: <%= song.rank %></h2>
-  <% if (song.owner.equals(user?._id)) { %>
+<section class="showView">
+  <div class="profileSongView">
+  <p><a style="text-decoration: none;" href="/users/<%= song.owner._id %>"><%= song.owner.username %></a></p>
+</div>
+  <div class="songCard">
+    <h1><%= song.artist %></h1>
+    <h1>🎶 <%= song.title %> 🎶</h1> 
+    <div class="word">
+    <h2>Mood: <%= song.wordAssociation %></h2>
+  </div>
+    <div class="rank">
+    <h2>Rank: <%= song.rank %></h2>
+  </div>
+    <% if (song.owner.equals(user?._id)) { %>
+    <div>
     <a href="/songs/<%= song._id %>/edit">
       <button class="btn">Edit Song</button>
     </a>
+  </div>
+  <div>
     <form action="/songs/<%= song._id %>?_method=DELETE" method="POST">
       <button type="submit" class="btn">X</button>
     </form>
+  </div>
     <% } else { %>
-    <section>
+    <div>
       <form action="/songs/<%= song._id %>/comments" method="POST">
       <textarea name="content"></textarea> <br>
       <button type="submit">Comment</button>
       </form> <br>
-    </section>
+    </div>
     <% } %>
-</section>
+  </div>
 
+<div class="comments">
 <h2>Comments</h2>
 <% if (song.comments.length) { %>
-<ul>
   <% song.comments?.forEach(comment => { %>
-    <li>
       <%= comment.content %> - <a href="/users/<%= comment.author._id %>"><%= comment.author.username %></a>
       <% if (comment.author.equals(user?._id)) { %>
+        <div class="btn">
         <form action="/songs/<%= song._id %>/<%= comment._id %>?_method=DELETE" method="POST">
-          <button class="btn" type="submit">X</button>
+          <button type="submit">x</button>
         </form>
         <a href="/songs/<%= song._id %>/<%= comment._id %>/edit">
-          <button class="btn">Edit Comment</button>
+          <button>Edit</button>
         </a>
-        <% } %>
-    </li> 
+      </div>
+        <% } %> 
   <% }) %>
-</ul>
 <% } else { %>
-  <h3>Be the first to comment on <%= song.title %> by <%= song.artist %></h3>
+  <h3>Be the first to comment</h3>
   <% } %>
+</div>
+</section>
 
 <%- include('../partials/footer') %>

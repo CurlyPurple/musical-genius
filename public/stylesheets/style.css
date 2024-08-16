@@ -1,25 +1,25 @@
-
-
 body {
+  background-image: url("../assets/sunset.jpg");
+  /* background-color: #7392B7; */
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  text-align: center;
 }
 
+
 a {
-  color: #00B7FF;
+  color: rgb(20, 55, 195);
   margin-top: 10px
 }
 
 .auth {
   display: flex;
   flex-direction: column;
+  margin-top: -10%;
 }
 
 .signUp {
   border: solid;
   width: 38vw;
-  height: 40vh;
+  height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@ a {
 .signIn {
   border: solid;
   width: 30vw;
-  height: 30vh;
+  height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,6 +115,98 @@ p {
 }
 
 .All {
-  text-shadow: 0 2px whitesmoke;
+  text-shadow: 0 2px #B3C5D7;
   font-weight: bold;
+}
+
+.store {
+  background: #f6f6f6;
+  width: 82vw;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.scroll {
+  width: 82vw;
+  background: #f6f6f6;
+  height: 40vw;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.scrollMe {
+  width: 82vw;
+  background: #f6f6f6;
+  height: 20vw;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.content {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.mySongs {
+  background: #f6f6f6;
+  width: 82vw;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.showView {
+  width: 82vw;
+  height: 50vw;
+  border: solid;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 4%;
+  display: flex;
+}
+
+.songCard {
+  width: 32vw;
+  height: 30vw;
+  border: solid;
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 15%;
+  text-align: center;
+  border-radius: 20%;
+}
+
+.comments {
+  width: 32vw;
+  height: 40vw;
+  border: solid;
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.profileSongView {
+  width: 32vw;
+  border: solid;
+  height: 10vh;
+  font-size: 40px;
+  border-radius: 10%;
+  margin-left: 6%;
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rank {
+  border: solid;
 }

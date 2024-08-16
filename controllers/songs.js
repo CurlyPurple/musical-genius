@@ -21,7 +21,7 @@ async function create(req,res) {
   try {
     req.body.owner = req.session.user._id
     await Song.create(req.body)
-    res.redirect('/songs')
+    res.redirect(`/users/${req.session.user._id}`)
   } catch (error) {
     console.log(error)
     res.redirect('/songs')

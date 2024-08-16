@@ -3,15 +3,13 @@
 
 <main>
   <form id="new-song" action="/songs/<%= song._id %>?_method=PUT" method="POST">
-    <label for="album-cover-input">Add Album Cover Image</label>
-    <input type="text" name="albumCover" id="album-cover-input" value="<%= song.albumCover %>"><br>
     <label for="title-input">Add Song Title:</label>
     <input type="text" name="title" id="title-input" value="<%= song.title %>"><br>
     <label for="artist-input">Add Artist</label>
     <input type="text" name="artist" id="artist-input" value="<%= song.artist %>"><br>
     <label for="word-association-input">One word for how this song makes you feel:</label>
     <input type="text" name="wordAssociation" id="word-association-input" value="<%= song.wordAssociation %>"><br>
-    <label for="rank-input">How much do you enjoy this song? (Choose number between 1-10)</label>
+    <label for="rank-input">Rank this song? (1 is ranked best)</label>
     <input type="number" name="rank" id="rank-input" min="1" max="10" value="<%= song.rank %>"> <br>
     <button type="submit">Edit Song</button>
   </form>

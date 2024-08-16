@@ -3,6 +3,19 @@
 
 <h1>This is your profile page <%= selectedUser.username %></h1>
 
+<h2>My Songs</h2>
+<section class="mySongs">
+  <div class="scrollMe">
+    <div class="content">
+    <% songs.forEach( song => { %>
+      <% if(song.owner.equals(user?._id)) { %>
+        <a style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a> |
+      <% } %>
+      <% })  %>
+    </div>
+    </div>
+</section>
+
 <section id="song-form">
   <h2>New Song</h2>
   <form id="new-song" action="/songs" method="POST">
@@ -16,17 +29,6 @@
     <input type="number" name="rank" id="rank-input" min="1" max="5"> <br><br>
     <button type="submit">Add Song</button>
   </form>
-</section>
-
-<section>
-  <h1>My Songs</h1>
-  <ul>
-    <% songs.forEach( song => { %>
-      <% if(song.owner.equals(user?._id)) { %>
-        <a href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a>|
-      <% } %>
-      <% })  %>
-  </ul>
 </section>
 
 <%- include('../partials/footer') %>
