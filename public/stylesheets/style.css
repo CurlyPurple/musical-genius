@@ -1,6 +1,6 @@
 body {
   background-image: url("../assets/sunset.jpg");
-  /* background-color: #7392B7; */
+  background-color: #8B85C1;
   padding: 50px;
 }
 
@@ -52,6 +52,8 @@ nav {
   justify-content: center;
   padding: 10px;
   min-height: 30px;
+  border-color: black;
+  border: solid;
 }
 
 nav > a {
@@ -86,7 +88,17 @@ h2 {
   height: 30px;
 }
 
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
 .genius {
+  margin-left: 15%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -107,10 +119,11 @@ span {
   height: 300px;
   border-width: 250px;
   border-color: black;
-  text-align: center;
   border: solid;
+  text-align: center;
   margin-left: 3%;
   border-radius: 5%;
+  background-color: whitesmoke;
 }
 
 p {
@@ -128,6 +141,8 @@ p {
   margin: 5% auto;
   padding: 20px;
   border-radius: 10px;
+  border-color: black;
+  border: solid;
 }
 
 .scroll {
@@ -157,6 +172,8 @@ p {
   margin: 5% auto;
   padding: 20px;
   border-radius: 30px;
+  border-color: black;
+  border: solid;
 }
 
 .showView {
@@ -167,6 +184,7 @@ p {
   margin: auto;
   margin-top: 4%;
   display: flex;
+  background-color: #7A6F9B;
 }
 
 .songCard {
@@ -178,6 +196,7 @@ p {
   margin-top: 15%;
   text-align: center;
   border-radius: 20%;
+  background-color: whitesmoke;
 }
 
 .comments {
@@ -188,6 +207,7 @@ p {
   margin-left: 45%;
   margin-top: 5%;
   text-align: center;
+  background-color: whitesmoke;
 }
 
 .btn {
@@ -208,6 +228,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: whitesmoke;
 }
 
 .editSong {
@@ -240,6 +261,8 @@ p {
   margin-top: -27%;
   margin-left: 30%;
   border-radius: 5%;
+  border-color: black;
+  border: solid;
 }
 
 .scrollMe2 {
@@ -254,4 +277,53 @@ p {
   font-size: 20px;
   padding: 10px;
   text-align: center;
+}
+
+.theirWords {
+  width: 20vw;
+  background: #f6f6f6;
+  height: 27vw;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  border-radius: 5%;
+}
+
+.scrollMe3 {
+  width: 20vw;
+  background: #f6f6f6;
+  height: 27vw;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.content3 {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.theirSongs {
+  width: 60vw;
+  background: #f6f6f6;
+  height: 27vw;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  border-radius: 5%;
+  margin-top: 0%;
+  margin-left: 30%;
+}
+
+.scrollMe4 {
+  width: 60vw;
+  background: #f6f6f6;
+  height: 27vw;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.content4 {
+  font-size: 20px;
+  padding: 10px;
 }

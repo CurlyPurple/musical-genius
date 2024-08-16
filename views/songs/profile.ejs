@@ -1,7 +1,7 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1>This is your profile page <%= selectedUser.username %></h1>
+<h1><%= selectedUser.username %>'s Profile</h1>
 
 <h2>My Songs</h2>
 <section class="mySongs">
@@ -32,12 +32,13 @@
 </section>
 
 <section class="myComments">
+  <h4>My Song's Comments</h4>
   <div class="scrollMe2">
     <div class="content2">
       <% songs.forEach( song => { %>
         <% if(song.owner.equals(user?._id)) { %>
           <% song.comments?.forEach(comment => { %>
-            "<%= comment.content %>" - <a style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %> by <%= song.artist %></a>
+            "<%= comment.content %>" - <a style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %> by <%= song.artist %></a> <br>
             <% })  %>
           <% } %>
       <% })  %>
