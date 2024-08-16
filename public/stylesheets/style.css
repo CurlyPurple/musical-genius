@@ -231,21 +231,21 @@ p {
 
 
 .myComments {
-  width: 60vw;
+  width: 50vw;
   background: #f6f6f6;
   height: 27vw;
   overflow: hidden;
   overflow-y: scroll;
   position: absolute;
   margin-top: -27%;
-  margin-left: 27%;
+  margin-left: 30%;
   border-radius: 5%;
 }
 
 .scrollMe2 {
-  width: 82vw;
+  width: 50vw;
   background: #f6f6f6;
-  height: 20vw;
+  height: 27vw;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -253,4 +253,5 @@ p {
 .content2 {
   font-size: 20px;
   padding: 10px;
+  text-align: center;
 }
