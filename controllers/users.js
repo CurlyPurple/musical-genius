@@ -17,17 +17,17 @@ async function show(req, res) {
   console.log(selectedId);
   
   if (selectedUser.equals(req.session.user._id)) {
-  res.render('songs/profile', {
-    selectedUser,
-    songs
-  })
-} else {
-  res.render('songs/difprofile', {
-    songs,
-    selectedUser,
-    selectedId
-  })
-}
+    res.render('songs/profile', {
+      selectedUser,
+      songs
+    })
+  } else {
+    res.render('songs/difprofile', {
+      songs,
+      selectedUser,
+      selectedId
+    })
+  }
 }
 
 export {

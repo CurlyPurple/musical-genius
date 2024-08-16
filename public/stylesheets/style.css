@@ -1,12 +1,12 @@
 body {
-  background-image: url("../assets/sunset.jpg");
-  background-color: #8B85C1;
   padding: 50px;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
 }
 
 
 a {
-  color: rgb(20, 55, 195);
+  color: black;
   margin-top: 10px
 }
 
@@ -26,6 +26,7 @@ a {
   border-radius: 20px;
   margin: auto;
   margin-top: 5%;
+  background-color: whitesmoke;
 }
 
 .signIn {
@@ -38,6 +39,7 @@ a {
   border-radius: 20px;
   margin: auto;
   margin-top: 5%;
+  background-color: whitesmoke;
 }
 
 .friend {
@@ -66,8 +68,8 @@ nav > a {
 }
 .person {
   width: 125px;
-  height: 200px;
-  background-color: black;
+  height: 125px;
+  background-color: #445E93;
   margin: 5px;
   border-radius: 5px 30px 5px 30px;
   box-shadow: 10px 10px 5px lightblue;
@@ -81,15 +83,19 @@ nav > a {
 
 h1 {
   text-align: center;
+  background-color: whitesmoke;
 }
 
 h2 {
   text-align: center;
   height: 30px;
+  background-color: whitesmoke;
+
 }
 
 h3 {
   text-align: center;
+  background-color: whitesmoke;
 }
 
 h4 {
