@@ -5,10 +5,9 @@ import { User } from "../models/user.js"
 
 async function index(req,res) {
   try {
-    
     const songs = await Song.find({})
     res.render('songs/index', {
-      songs
+      songs,
     })
   } catch (error) {
     console.log(error)

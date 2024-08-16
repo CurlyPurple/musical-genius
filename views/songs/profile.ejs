@@ -31,4 +31,18 @@
   </form>
 </section>
 
+<section class="myComments">
+  <div class="scrollMe2">
+    <div class="content2">
+      <% songs.forEach( song => { %>
+        <% if(song.owner.equals(user?._id)) { %>
+          <% song.comments?.forEach(comment => { %>
+            "<%= comment.content %>" - <%= song.title%> by <%= song.artist %>
+            <% })  %>
+          <% } %>
+      <% })  %>
+    </div>
+  </div>
+      </section>
+
 <%- include('../partials/footer') %>

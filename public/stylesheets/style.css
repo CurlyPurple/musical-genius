@@ -228,3 +228,29 @@ p {
 .btn {
   box-shadow: 5px 3px 5px lightblue;
 }
+
+
+.myComments {
+  width: 60vw;
+  background: #f6f6f6;
+  height: 27vw;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  margin-top: -27%;
+  margin-left: 27%;
+  border-radius: 5%;
+}
+
+.scrollMe2 {
+  width: 82vw;
+  background: #f6f6f6;
+  height: 20vw;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.content2 {
+  font-size: 20px;
+  padding: 10px;
+}
