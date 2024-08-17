@@ -35,11 +35,21 @@
 <h2>Comments</h2>
 <% if (song.comments.length) { %>
   <div class="minicomments">
+    <div class="minicomments2">
     <% song.comments?.forEach((comment) => { %>
-      <a style="text-decoration: none;" href="/users/<%= comment.author._id %>"><%= comment.author.username %></a>
-    <%= comment.createdAt %>
-    "<%= comment.content %>"
+      <section class="commenttag">
+      <div class="usernamectag">
+        <a style="text-decoration: none; color:whitesmoke" href="/users/<%= comment.author._id %>"><%= comment.author.username %></a>
+      </div>
+      <div class="createdctag">
+        <%= comment.createdAt %>
+      </div>
+      <div class="contentctag">
+        "<%= comment.content %>"
+      </div>
+    </section>
   <br>
+    </div>
   </div>
 </section>
       <% if (comment.author.equals(user?._id)) { %>
