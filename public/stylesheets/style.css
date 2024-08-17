@@ -22,8 +22,13 @@ a:hover {
 .asongs:hover {
   text-decoration: underline;
   font-weight: bold;
-  color: #ed565b;
+  color: whitesmoke;
+}
+
+.stag:hover {
   border: solid;
+  border-color: #ed565b;
+  background: transparent;
 }
 
 .auth {
@@ -67,7 +72,6 @@ h1 {
 }
 
 nav {
-  background-image: url('../assets/NightSky.webp');
   color: #1a1a1a;
   display: flex;
   align-items: center;
@@ -76,7 +80,10 @@ nav {
   min-height: 30px;
   border-color: black;
   border: solid;
-  border-radius: 5%;
+  border-top-width: medium;
+  border-bottom-width: medium;
+  border-left-width: 0px;
+  border-right-width: 0px;
 }
 
 nav > a {
@@ -196,7 +203,6 @@ p {
 }
 
 .store {
-  background-image: url('../assets/NightSky.webp');
   box-shadow: 10px 10px 5px #13262F;
   width: 82vw;
   margin: 5% auto;
@@ -208,10 +214,15 @@ p {
 
 .scroll {
   width: 82vw;
-  background: #C8D3D5;
   height: 40vw;
   overflow: hidden;
   overflow-y: scroll;
+  border: solid;
+  border-radius: 20px;
+  border-top-width: medium;
+  border-bottom-width: medium;
+  border-left-width: 0px;
+  border-right-width: 0px;
 }
 
 .content {
@@ -220,6 +231,19 @@ p {
   padding: 10px;
   color: black;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stag {
+  border: solid;
+  width: fit-content;
+  padding: 4px;
+  margin: 2px;
+  border-radius: 10px 20px 10px 20px;
+  text-align: center;
+  height: fit-content;
 }
 
 .scrollme {
@@ -268,13 +292,11 @@ p {
   border: solid;
   height: 10vh;
   font-size: 40px;
-  border-radius: 20%;
   margin-left: 4%;
   margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: whitesmoke;
 }
 
 .mycsongs {
@@ -283,13 +305,12 @@ p {
 
 .songcard {
   width: 20vw;
-  height: 27vw;
+  height: 30vw;
   border: solid;
   position: absolute;
   margin-left: 5%;
   margin-top: 15%;
   text-align: center;
-  border-radius: 20%;
   background-color: whitesmoke;
   font-size: 10px;
 }
@@ -310,24 +331,30 @@ p {
 
 
 .mycomments {
-  width: 55vw;
-  background: #f6f6f6;
-  height: 30vw;
-  overflow: hidden;
-  overflow-y: scroll;
-  position: absolute;
-  margin-top: -30%;
-  margin-left: 30%;
-  border-radius: 5%;
-  border-color: black;
+  width: 48vw;
+  height: 37vw;
   border: solid;
-  box-shadow: 10px 10px 5px #FCB0B3;
+  position: absolute;
+  margin-left: 35%;
+  margin-top:-33%;
+  text-align: center;
+  border-radius: 5%;
+  overflow-x: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .content2 {
   font-size: 20px;
   padding: 10px;
   text-align: center;
+  overflow-x: scroll;
+  overflow-x: hidden;
+}
+
+.scrollme2 {
+
 }
 
 .theirwords {
@@ -477,8 +504,6 @@ p {
 }
 
 .navbar {
-  background-image: url('../assets/NightSky.webp');
-  background-size: cover;
   margin-left: 0%;
   width: 95%;
 }
