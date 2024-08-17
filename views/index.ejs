@@ -1,7 +1,20 @@
 <%- include('./partials/html-head') %>
 
-<%- include('./partials/nav') %>
+</head>
+<body>
+  <nav>
+    <% if (user) { %>
+      <a href="/users/<%= user._id %>">My Profile</a>
+      <a href="/songs">Songs</a>
+      <a href="/users">Geniuses</a>
+      <a href="/auth/sign-out">Sign Out</a>
+    <% } else { %>
+      <a href="/auth/sign-up">Sign Up</a>
+      <a href="/auth/sign-in">Sign In</a>
+    <% } %>
+  </nav>
 
-<h1>Welcome to The Perfect Place to showcase your favorite songs</h1>
-
+<h1 class="index">Welcome to The Perfect Place to showcase your favorite songs</h1>
+<section class="recordimage">
+</section>
 <%- include('./partials/footer') %>

@@ -1,19 +1,19 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section class="signUp">
+<section class="signup">
 <form class="auth" action="/auth/sign-up" method="POST">
   <h1>Create a new account!</h1>
-  <label for="username">Username:</label>
-  <input type="text" maxlength="12" name="username" id="username" />
+  <label for="username"></label>
+  <input class="signuphover" type="text" maxlength="12" name="username" id="username" placeholder="Username"/>
   <br>
-  <label for="password">Password:</label>
-  <input type="password" name="password" id="password" />
+  <label for="password"></label>
+  <input class="signuphover" type="password" name="password" id="password" placeholder="Password" />
   <br>
-  <label for="confirmPassword">Confirm Password:</label>
-  <input type="password" name="confirmPassword" id="confirmPassword" />
+  <label for="confirmPassword"></label>
+  <input class="signuphover" type="password" name="confirmPassword" id="confirmpassword" placeholder="Confirm Password"/>
   <br>
-  <button type="submit">Sign up</button>
+  <button class="btnsignup" type="submit">Sign up</button>
 </form>
 </section>
 

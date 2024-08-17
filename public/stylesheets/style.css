@@ -6,8 +6,24 @@ body {
 
 
 a {
-  color: black;
+  color: whitesmoke;
   margin-top: 10px
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.asongs {
+  color: black;
+}
+
+.asongs:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #ed565b;
+  border: solid;
 }
 
 .auth {
@@ -16,10 +32,10 @@ a {
   margin-top: -10%;
 }
 
-.signUp {
+.signup {
   border: solid;
   width: 38vw;
-  height: 55vh;
+  height: 35vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,10 +45,10 @@ a {
   background-color: whitesmoke;
 }
 
-.signIn {
+.signin {
   border: solid;
   width: 30vw;
-  height: 40vh;
+  height: 25vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,6 +72,7 @@ nav {
   min-height: 30px;
   border-color: black;
   border: solid;
+  border-radius: 5%;
 }
 
 nav > a {
@@ -66,14 +83,11 @@ nav > a {
   align-items: center;
   justify-content: center;
 }
-.person {
-  width: 125px;
-  height: 125px;
-  background-color: #445E93;
-  margin: 5px;
-  border-radius: 5px 30px 5px 30px;
-  box-shadow: 10px 10px 5px lightblue;
+
+.usernamesong:hover {
+  text-decoration: underline;
 }
+
 .profile {
   display: flex;
   justify-content: center;
@@ -81,33 +95,43 @@ nav > a {
   font-size: smaller;
 }
 
-h1 {
-  text-align: center;
-  background-color: whitesmoke;
-}
+
 
 h2 {
   text-align: center;
   height: 30px;
-  background-color: whitesmoke;
 
 }
 
 h3 {
   text-align: center;
-  background-color: whitesmoke;
 }
 
 h4 {
   text-align: center;
 }
 
+.person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 50%;
+  background-color: #ed565b;
+  box-shadow: 10px 10px 5px #13262F;
+  margin: 15px;
+  padding: 1%;
+  border-radius: 5px 30px 5px 30px;
+}
+
 .genius {
-  margin-left: 15%;
-  width: 70%;
+  margin-left: 10%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 
@@ -130,19 +154,45 @@ span {
   margin-left: 3%;
   border-radius: 5%;
   background-color: whitesmoke;
+  box-shadow: 10px 10px 5px #FCB0B3;
 }
 
 p {
   text-align: center;
 }
 
-.All {
-  text-shadow: 0 2px #B3C5D7;
+.index {
+  text-shadow: 0 2px #13262F;
   font-weight: bold;
+  color: #ed565b;
+}
+
+.all {
+  text-shadow: 0 2px #13262F;
+  font-weight: bold;
+  color: #ed565b;
+  text-decoration: underline #13262F;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.title {
+  text-shadow: 0 2px #13262F;
+  font-weight: bold;
+  color: #ed565b;
+  text-align: center;
+}
+
+.profilename {
+    text-shadow: 0 2px #13262F;
+    font-weight: bold;
+    color: #ed565b;
+    text-decoration: underline #13262F;
 }
 
 .store {
-  background: #f6f6f6;
+  background-color: #ed565b;
+  box-shadow: 10px 10px 5px #13262F;
   width: 82vw;
   margin: 5% auto;
   padding: 20px;
@@ -153,15 +203,15 @@ p {
 
 .scroll {
   width: 82vw;
-  background: #f6f6f6;
+  background: #C8D3D5;
   height: 40vw;
   overflow: hidden;
   overflow-y: scroll;
 }
 
-.scrollMe {
+.scrollme {
   width: 82vw;
-  background: #f6f6f6;
+  /* background: #f6f6f6; */
   height: 20vw;
   overflow: hidden;
   overflow-y: scroll;
@@ -170,19 +220,22 @@ p {
 .content {
   font-size: 20px;
   padding: 10px;
+  color: black;
+  margin: auto;
 }
 
-.mySongs {
-  background: #f6f6f6;
+.mysongs {
+  /* background: #f6f6f6; */
   width: 82vw;
   margin: 5% auto;
   padding: 20px;
   border-radius: 30px;
   border-color: black;
   border: solid;
+  box-shadow: 10px 10px 5px #FCB0B3;
 }
 
-.showView {
+.showview {
   width: 82vw;
   height: 50vw;
   border: solid;
@@ -190,10 +243,10 @@ p {
   margin: auto;
   margin-top: 4%;
   display: flex;
-  background-color: #7A6F9B;
+  box-shadow: 10px 10px 5px #FCECC9;
 }
 
-.songCard {
+.songcard {
   width: 32vw;
   height: 30vw;
   border: solid;
@@ -207,13 +260,14 @@ p {
 
 .comments {
   width: 32vw;
-  height: 40vw;
+  height: 42vw;
   border: solid;
   position: absolute;
   margin-left: 45%;
-  margin-top: 5%;
+  margin-top:4%;
   text-align: center;
   background-color: whitesmoke;
+  border-radius: 5%;
 }
 
 .btn {
@@ -223,7 +277,7 @@ p {
   margin-right: 30%;
 }
 
-.profileSongView {
+.profilesongview {
   width: 32vw;
   border: solid;
   height: 10vh;
@@ -237,7 +291,7 @@ p {
   background-color: whitesmoke;
 }
 
-.editSong {
+.editsong {
   width: 200px;
   height: 300px;
   border-width: 250px;
@@ -257,26 +311,19 @@ p {
 }
 
 
-.myComments {
-  width: 50vw;
+.mycomments {
+  width: 55vw;
   background: #f6f6f6;
-  height: 27vw;
+  height: 30vw;
   overflow: hidden;
   overflow-y: scroll;
   position: absolute;
-  margin-top: -27%;
+  margin-top: -30%;
   margin-left: 30%;
   border-radius: 5%;
   border-color: black;
   border: solid;
-}
-
-.scrollMe2 {
-  width: 50vw;
-  background: #f6f6f6;
-  height: 27vw;
-  overflow: hidden;
-  overflow-y: scroll;
+  box-shadow: 10px 10px 5px #FCB0B3;
 }
 
 .content2 {
@@ -285,17 +332,18 @@ p {
   text-align: center;
 }
 
-.theirWords {
+.theirwords {
   width: 20vw;
   background: #f6f6f6;
-  height: 27vw;
+  height: 30vw;
   overflow: hidden;
   overflow-y: scroll;
   position: absolute;
   border-radius: 5%;
+  border: solid;
 }
 
-.scrollMe3 {
+.scrollme3 {
   width: 20vw;
   background: #f6f6f6;
   height: 27vw;
@@ -309,27 +357,142 @@ p {
   text-align: center;
 }
 
-.theirSongs {
-  width: 60vw;
-  background: #f6f6f6;
-  height: 27vw;
-  overflow: hidden;
-  overflow-y: scroll;
-  position: absolute;
+.theirsongs {
+  width: 82vw;
+  background-image: url('../assets/NightSky.webp');
+  background-size: cover;
+  height: 30vw;
+  overflow-x: scroll;
   border-radius: 5%;
-  margin-top: 0%;
-  margin-left: 30%;
+  margin-top: 5%;
+  margin-left: 2%;
+  border: solid;
 }
 
-.scrollMe4 {
-  width: 60vw;
-  background: #f6f6f6;
-  height: 27vw;
-  overflow: hidden;
-  overflow-y: scroll;
+.eachsong {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.content4 {
-  font-size: 20px;
+.scrollme4 > .eachsong {
+  margin-top: 5%;
+  width: 380vw;
+  height: 25vw;
+  width: fit-content;
+}
+
+
+.btnsignup {
+  background-color: #13262F;
+  color: white;
+  border-radius: 10%/50%;
+}
+
+.btnsignin {
+  background-color: #13262F;
+  color: white;
+  border-radius: 10%/50%;
+}
+
+#password {
+  border-radius: 10%/10%;
+}
+
+#username {
+  border-radius: 10%/10%;
+}
+#confirmpassword {
+  border-radius: 10%/10%;
+}
+
+.navbar {
+  background-image: url('../assets/NightSky.webp');
+  background-size: cover;
+  margin-left: 0%;
+  width: 95%;
+}
+
+.minicusername {
+  font-size: 90%;
+  position: absolute;
+  margin-left: 8%;
+}
+
+.minicusername:hover {
+  font-size: 90%;
+  position: absolute;
+  margin-left: 8%;
+  text-decoration: underline;
+}
+
+.miniccontent {
+  font-size: 150%;
+  position: relative;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.create {
+  position: absolute;
+  margin-left: 32%;
+  margin-top: 1.5%;
+    width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 60%;
+}
+
+.comments > .minicomments {
+  width: 100%;
+  height: 100%;
+}
+
+.btnaddsong {
+  background-color: #13262F;
+  color: white;
+  border-radius: 10%/50%;
+}
+
+.recordimage {
+  background-image: url('../assets/Records.jpg');
+  background-size: cover;
+  height: 500px;
+  border-radius: 10%;
+  border: solid;
+}
+
+.signuphover:hover {
+  border: 1mm ridge #FCB0B3;
+}
+
+
+.songtag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-radius: 5px;
+  width: 350px;
+  margin: 10px;
+  height: 130px;
   padding: 10px;
+  box-shadow: 10px 10px 5px #FCB0B3;
+  font-family: 'Jersey 10';
+  color: whitesmoke;
+  font-size: 30px;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
+}
+
+.topmood {
+  position: relative;
+}
+
+.toprank > .songtag {
+  position: absolute;
+  font-size: 30px;
 }

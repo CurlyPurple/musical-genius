@@ -3,7 +3,7 @@
 
 <main>
   <h1>Edit your Song</h1>
-  <div class="editSong">
+  <div class="editsong">
   <form id="new-song" action="/songs/<%= song._id %>?_method=PUT" method="POST">
     <label for="title-input">Add Song Title:</label>
     <input type="text" name="title" id="title-input" value="<%= song.title %>"><br>

@@ -1,12 +1,12 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section class="showView">
-  <div class="profileSongView">
-  <p><a style="text-decoration: none;" href="/users/<%= song.owner._id %>"><%= song.owner.username %></a></p>
-</div>
-  <div class="songCard">
-    <h1><%= song.artist %></h1>
+<section class="showview">
+  <div class="profilesongview">
+  <p class="usernamesong"><a style="text-decoration: none; color: black" href="/users/<%= song.owner._id %>"><%= song.owner.username %></a></p>
+  </div>
+  <div class="songcard">
+    <h1 class="artist"><%= song.artist %></h1>
     <h1>🎶 <%= song.title %> 🎶</h1> 
     <h2>Mood: <%= song.wordAssociation %></h2>
     <h2>Rank: <%= song.rank %></h2>
@@ -15,12 +15,12 @@
     <a href="/songs/<%= song._id %>/edit">
       <button class="btn">Edit Song</button>
     </a>
-  </div>
-  <div>
+    </div>
+    <div>
     <form action="/songs/<%= song._id %>?_method=DELETE" method="POST">
       <button type="submit" class="btn">X</button>
     </form>
-  </div>
+    </div>
     <% } else { %>
     <div>
       <form action="/songs/<%= song._id %>/comments" method="POST">
@@ -31,11 +31,17 @@
     <% } %>
   </div>
 
-<div class="comments">
+<section class="comments">
 <h2>Comments</h2>
 <% if (song.comments.length) { %>
-  <% song.comments?.forEach(comment => { %>
-      <%= comment.content %> - <a href="/users/<%= comment.author._id %>"><%= comment.author.username %></a><br>
+  <div class="minicomments">
+    <% song.comments?.forEach((comment) => { %>
+      <a style="text-decoration: none;" href="/users/<%= comment.author._id %>"><%= comment.author.username %></a>
+    <%= comment.createdAt %>
+    "<%= comment.content %>"
+  <br>
+  </div>
+</section>
       <% if (comment.author.equals(user?._id)) { %>
         <div class="btn">
         <form action="/songs/<%= song._id %>/<%= comment._id %>?_method=DELETE" method="POST">
@@ -46,10 +52,10 @@
         </a>
       </div>
         <% } %> 
-  <% }) %>
-<% } else { %>
+    <% }) %>
+  <% } else { %>
   <h3>Be the first to comment</h3>
-  <% } %>
+    <% } %>
 </div>
 </section>
 

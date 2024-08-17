@@ -1,20 +1,20 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h2>Discover Songs</h2>
-<h3>Click on a song to find out more</h3>
 <section class="store">
+    <h2>Discover Songs</h2>
     <div class="scroll">
     <div class="content">
     <% songs.forEach( song => { %>
     <% if(!(song.owner.equals(user?._id))) { %>
-    <a style="text-decoration: none;" href="/songs/<%= song._id %>">
+    <a class="asongs" style="text-decoration: none;" href="/songs/<%= song._id %>">
     <%= song.title %> - <%= song.artist %>
-    </a>|
+    </a> |
     <% } %>
     <% })  %>
     </div>
 </div>
+<h3>Click on a song to find out more</h3>
 </section>
 
 <%- include('../partials/footer') %>

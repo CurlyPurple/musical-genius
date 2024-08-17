@@ -33,6 +33,7 @@ async function show(req,res) {
     const song = await Song.findById(req.params.songId)
     .populate('owner')
     .populate('comments.author')
+    .populate('comments.createdAt')
     res.render('songs/show', {
       song,
       selectedUser

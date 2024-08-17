@@ -1,49 +1,57 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1><%= selectedUser.username %>'s Profile</h1>
-
-<h2>My Songs</h2>
-<section class="mySongs">
-  <div class="scrollMe">
-    <div class="content">
-    <% songs.forEach( song => { %>
-      <% if(song.owner.equals(user?._id)) { %>
-        <a style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a> |
-      <% } %>
-      <% })  %>
-    </div>
-    </div>
-</section>
-
-<section id="song-form">
-  <h2>New Song</h2>
-  <form id="new-song" action="/songs" method="POST">
-    <label for="title-input">Add Song Title:</label>
-    <input type="text" name="title" id="title-input"><br>
-    <label for="artist-input">Add Artist:</label>
-    <input type="text" name="artist" id="artist-input"><br>
-    <label for="word-association-input">Emotion for song (One Word):</label><br>
-    <input type="text" name="wordAssociation" id="word-association-input"><br>
-    <label for="rank-input">Rank this song? (1 is ranked best)</label>
-    <input type="number" name="rank" id="rank-input" min="1" max="5"> <br><br>
-    <button class="btn" type="submit">Add Song</button>
-  </form>
-</section>
-
-<section class="myComments">
-  <h4>My Song's Comments</h4>
-  <div class="scrollMe2">
-    <div class="content2">
-      <% songs.forEach( song => { %>
+<h1 class="profilename"><%= selectedUser.username %>'s Profile</h1>
+<section class="profileview">
+  <section class="mysongs">
+    <h2>My Songs</h2>
+    <div class="scrollme">
+      <div class="content">
+      <% songs.forEach( song =>  { %>
         <% if(song.owner.equals(user?._id)) { %>
-          <% song.comments?.forEach(comment => { %>
-            "<%= comment.content %>" - <a style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %> by <%= song.artist %></a> <br>
-            <% })  %>
-          <% } %>
-      <% })  %>
+          <a style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a> |
+        <% } %>
+        <% } )  %>
+      </div>
+      </div>
+  </section>
+
+  <section id="song-form">
+    <h2>New Song</h2>
+    <form id="new-song" action="/songs" method="POST">
+      <label for="title-input">Add Song Title:</label>
+      <input type="text" name="title" id="title-input"><br>
+      <label for="artist-input">Add Artist:</label>
+      <input type="text" name="artist" id="artist-input"><br>
+      <label for="word-association-input">Emotion for song (One Word):</label><br>
+      <input type="text" name="wordAssociation" id="word-association-input"><br>
+      <label for="rank-input">Rank this song? (1 is ranked best)</label>
+      <select name="rank" id="rank-input" min="1" max="5"> 
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+        <br><br>
+      <button class="btnaddsong" type="submit">Add Song</button>
+    </form>
+  </section>
+
+  <section class="mycomments">
+    <div class="scrollme2">
+      <h4>My Song's Comments</h4>
+      <div class="content2">
+        <% songs.forEach( song => { %>
+          <% if(song.owner.equals(user?._id)) { %>
+            <% song.comments?.forEach(comment => { %>
+              "<%= comment.content %>" - <a style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %> by <%= song.artist %></a> <br>
+              <% })  %>
+            <% } %>
+        <% })  %>
+      </div>
     </div>
-  </div>
-      </section>
+  </section>
+</section>
 
 <%- include('../partials/footer') %>

@@ -1,29 +1,17 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1><%= selectedUser.username %>'s Profile Page</h1>
-
-<section class="theirWords">
-  <div class="scrollMe3">
-    <div class="content3">
-      <h3>Moods</h3>
-<% songs.forEach( song => { %>
-  <% if(song.owner.equals(selectedUser?._id)) { %>
-    <div class="association"><a style="text-decoration: none;" href="/songs/<%= song._id %>"><h(<%= song.rank %>)><%= song.wordAssociation %></h(<%= song.rank %>)></a></div><br>
-    <% } %>
-    <% }) %>
-  </div>
-    </div>
-</section>
-
-
-<section class="theirSongs">
-  <div class="scrollMe4">
-    <div class="content4">
-  <h1><%= selectedUser.username %>'s Songs</h1>
-    <% songs.forEach( song => { %>
+<h1 class="title"><%= selectedUser.username %>'s Profile Page</h1>
+<section class="theirsongs">
+  <div class="scrollme4">
+    <div class="eachsong"><% songs.forEach( song => { %>
       <% if(song.owner.equals(selectedUser?._id)) { %>
-        <a href="/songs/<%= song._id %>"><%= song.title %> - <%= song.artist %></a>|
+        <section class="songtag">
+        <div><%= song.artist %></a></div>
+        <div><a style="color: whitesmoke;" href="/songs/<%= song._id %>"><%= song.title %></a></div>
+        <div class="toprank"><%= song.rank %></div>
+        <div class="topmood"><%= song.wordAssociation %></div>
+        </section>
       <% } %>
       <% })  %>
     </div>
