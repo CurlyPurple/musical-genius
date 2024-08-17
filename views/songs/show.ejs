@@ -3,7 +3,7 @@
 
 <section class="showview">
   <div class="profilesongview">
-  <p class="usernamesong"><a style="text-decoration: none; color: black" href="/users/<%= song.owner._id %>"><%= song.owner.username %></a></p>
+  <p><a style="text-decoration: none; color: black" href="/users/<%= song.owner._id %>"><%= song.owner.username %></a></p>
   </div>
   <div class="songcard">
     <h1 class="artist"><%= song.artist %></h1>
@@ -13,60 +13,52 @@
     <% if (song.owner.equals(user?._id)) { %>
     <div>
     <a href="/songs/<%= song._id %>/edit">
-      <button class="btn">Edit Song</button>
+      <button class="btnaddsong">Edit Song</button>
     </a>
     </div>
     <div>
     <form action="/songs/<%= song._id %>?_method=DELETE" method="POST">
-      <button type="submit" class="btn">X</button>
+      <button type="submit" class="btnaddsong">X</button>
     </form>
     </div>
     <% } else { %>
     <div>
       <form action="/songs/<%= song._id %>/comments" method="POST">
-      <textarea name="content"></textarea> <br>
-      <button class="btn" type="submit">Comment</button>
+      <textarea style="height: 40px" name="content"></textarea> <br>
+      <button class="btnaddsong" type="submit">Comment</button>
       </form> <br>
     </div>
     <% } %>
   </div>
 
 <section class="comments">
-<h2>Comments</h2>
+<h2 style="color: black;">Comments</h2>
+      <div class="comments2">
+        <div class="comments3">
 <% if (song.comments.length) { %>
-  <div class="minicomments">
-    <div class="minicomments2">
     <% song.comments?.forEach((comment) => { %>
-      <section class="commenttag">
-      <div class="usernamectag">
         <a style="text-decoration: none; color:whitesmoke" href="/users/<%= comment.author._id %>"><%= comment.author.username %></a>
-      </div>
-      <div class="createdctag">
-        <%= comment.createdAt %>
-      </div>
-      <div class="contentctag">
+        <p class="date"><%= comment.createdAt.toDateString() %></p>
+        <br>
         "<%= comment.content %>"
-      </div>
-    </section>
-  <br>
-    </div>
-  </div>
-</section>
+        <br>
+        _____________________________________________
+        <br>
       <% if (comment.author.equals(user?._id)) { %>
-        <div class="btn">
+        <div class="xcec">
         <form action="/songs/<%= song._id %>/<%= comment._id %>?_method=DELETE" method="POST">
-          <button type="submit">x</button>
+          <button class="xc" type="submit">x</button>
         </form>
         <a href="/songs/<%= song._id %>/<%= comment._id %>/edit">
-          <button>Edit</button>
+          <button class="ec">Edit</button>
         </a>
-      </div>
         <% } %> 
+      </div>
+      </div>
     <% }) %>
   <% } else { %>
   <h3>Be the first to comment</h3>
     <% } %>
-</div>
 </section>
 
 <%- include('../partials/footer') %>

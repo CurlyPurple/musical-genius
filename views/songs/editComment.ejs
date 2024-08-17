@@ -1,13 +1,13 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
+<section class="editsong">
   <h1>Edit your Comment</h1>
   <form action="/songs/<%= song._id %>/<%= comment._id %>?_method=PUT" method="POST">
     <label>Comment:
-      <textarea name="content"><%= comment.content  %></textarea>
+      <textarea style="height: 60px" name="content"><%= comment.content  %></textarea>
     </label>
-    <button type="submit">Update Comment</button>
+    <button class="btnaddsong" type="submit">Update Comment</button>
   </form>
 </section>
 

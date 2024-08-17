@@ -4,7 +4,7 @@
 <h1 class="profilename"><%= selectedUser.username %>'s Profile</h1>
   <section class="mysongs">
     <div class="scrollme">
-      <div class="content">
+      <div class="eachsong">
       <% songs.forEach( song =>  { %>
         <% if(song.owner.equals(user?._id)) { %>
           <section class="songtag">
@@ -48,7 +48,9 @@
         <% songs.forEach( song => { %>
           <% if(song.owner.equals(user?._id)) { %>
             <% song.comments?.forEach(comment => { %>
-              "<%= comment.content %>" - <a style="text-decoration: none;" href="/songs/<%= song._id %>"><%= song.title %> by <%= song.artist %></a> <br>
+              <a class="mycsongs" style="text-decoration: none; color: black;" href="/songs/<%= song._id %>"><%= song.title %> by <%= song.artist %></a> <br>
+              "<%= comment.content %>"
+              _______________________________________ <br>
               <% })  %>
             <% } %>
         <% })  %>
