@@ -11,19 +11,23 @@ Create an account on Musical Genius to build a library of your favorite songs. I
 
  ## Why Musical Genius:
 
- Music is a massive passion of mine. Different songs can enhance 
+ Music is a massive passion of mine. Different songs can bring different emotions and memories. They are a way to express your personality. One of the greatest feelings is showing a friend a song they have not heard before and having them relate to it in their own way. This brings that experience to another level.
 
 ## Attributions
 
-*
+* 
 *
 *
 
 ## Technology Implemented:
 
-*
-*
-*
-*
+![CSS logo](./public/assets/CSS.png)
+![Javascript logo](./public/assets/Javascript.png)
+![HTML5 logo](./public/assets/HTML5.png)
+![Heroku logo](./public/assets/heroku2.png)
 
 ## Stretch Goals:
+
+* Add a friends (Entourage) feature where you can add users to your group and personally recommend them songs
+* You can add a song directly from the song show view
+* You can sort songs according to artist, mood, or rank
