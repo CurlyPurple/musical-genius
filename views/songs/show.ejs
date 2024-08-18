@@ -7,9 +7,9 @@
   </div>
   <div class="songcard">
     <h1 class="artist"><%= song.artist %></h1>
-    <h1>🎶 <%= song.title %> 🎶</h1> 
-    <h2>Mood: <%= song.wordAssociation %></h2>
-    <h2>Rank: <%= song.rank %></h2>
+    <h1 class="artist">🎶 <%= song.title %> 🎶</h1> 
+    <h2 class="songword"><%= song.wordAssociation %></h2>
+    <h2 class="songrank"><%= song.rank %></h2>
     <% if (song.owner.equals(user?._id)) { %>
     <div>
     <a href="/songs/<%= song._id %>/edit">
@@ -22,7 +22,7 @@
     </form>
     </div>
     <% } else { %>
-    <div>
+    <div class="commentbox">
       <form action="/songs/<%= song._id %>/comments" method="POST">
       <textarea style="height: 40px" name="content"></textarea> <br>
       <button class="btnaddsong" type="submit">Comment</button>
@@ -39,7 +39,6 @@
     <% song.comments?.forEach((comment) => { %>
         <a style="text-decoration: none; color:whitesmoke" href="/users/<%= comment.author._id %>"><%= comment.author.username %></a>
         <p class="date"><%= comment.createdAt.toDateString() %></p>
-        <br>
         "<%= comment.content %>"
         <br>
         _____________________________________________

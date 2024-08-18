@@ -97,6 +97,7 @@ nav > a {
 
 .usernamesong:hover {
   text-decoration: underline;
+  color: whitesmoke;
 }
 
 .profile {
@@ -288,7 +289,7 @@ p {
 }
 
 .profilesongview {
-  width: 24vw;
+  width: 25vw;
   border: solid;
   height: 10vh;
   font-size: 40px;
@@ -297,6 +298,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-radius: 30px;
 }
 
 .mycsongs {
@@ -304,16 +308,57 @@ p {
 }
 
 .songcard {
-  width: 20vw;
-  height: 30vw;
+  width: fit-content;
+  height: fit-content;
   border: solid;
-  position: absolute;
-  margin-left: 5%;
-  margin-top: 15%;
+  position: relative;
+  margin-left: -27%;
+  margin-top: 20%;
   text-align: center;
-  background-color: whitesmoke;
   font-size: 10px;
+  border-radius: 10px;
 }
+
+
+
+.comments {
+  width: 48vw;
+  height: 42vw;
+  border: solid;
+  position: relative;
+  margin-top:5%;
+  margin-left: 7%;
+  text-align: center;
+  border-radius: 5%;
+  overflow-x: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.songword {
+  font-size: 30px;
+  position: relative;
+  margin-top: 20%;
+  margin-left: -30%;
+}
+
+.songrank {
+  font-size: 65px;
+  position: relative;
+  margin-left: 75%;
+  margin-top: -40%;
+}
+
+.artist {
+  font-size: 20px;
+}
+
+.commentbox {
+  position: relative;
+  margin-top: 25%;
+}
+
 .editsong {
   width: 200px;
   height: 300px;
@@ -406,21 +451,6 @@ p {
   width: 380vw;
   height: 25vw;
   width: fit-content;
-}
-
-.comments {
-  width: 48vw;
-  height: 42vw;
-  border: solid;
-  position: absolute;
-  margin-left: 30%;
-  margin-top:4%;
-  text-align: center;
-  border-radius: 5%;
-  overflow-x: scroll;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 .commments2 {
