@@ -1,0 +1,112 @@
+.recordimage {
+  background-image: url('../assets/Records.jpg');
+  background-size: cover;
+  height: 500px;
+  border-radius: 10%;
+  border: solid;
+}
+
+.index {
+  text-shadow: 0 2px #13262F;
+  font-weight: bold;
+  color: #ed565b;
+  text-align: center;
+}
+
+.all {
+  text-shadow: 0 2px #13262F;
+  font-weight: bold;
+  color: #ed565b;
+  text-decoration: underline #13262F;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.genius {
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  height: 270px;
+  overflow-x: hidden;
+  overflow-x: scroll;
+}
+
+.person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 60%;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
+  background-position: 10%;
+  box-shadow: 10px 10px 5px #13262F;
+  margin: 15px;
+  padding: 5%;
+  border-radius: 5px 30px 5px 30px;
+  font-size: 20px;
+}
+
+.store {
+  box-shadow: 10px 10px 5px #13262F;
+  width: 82vw;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  border-color: black;
+  border: solid;
+}
+
+.scroll {
+  width: 82vw;
+  height: 40vw;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: solid;
+  border-radius: 20px;
+  border-top-width: medium;
+  border-bottom-width: medium;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+
+.content {
+  width: fit-content;
+  font-size: 20px;
+  padding: 10px;
+  color: black;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stag {
+  border: solid;
+  width: fit-content;
+  padding: 4px;
+  margin: 2px;
+  border-radius: 10px 20px 10px 20px;
+  text-align: center;
+  height: fit-content;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.asongs {
+  color: black;
+}
+
+.asongs:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.stag:hover {
+  border: solid;
+  border-color: #ed565b;
+  background: transparent;
+}

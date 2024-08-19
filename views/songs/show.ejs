@@ -3,7 +3,7 @@
 
 <section class="showview">
   <div class="profilesongview">
-  <p class="usernamesong"><a style="text-decoration: none; color: black" href="/users/<%= song.owner._id %>"><%= song.owner.username %></a></p>
+    <p class="usernamesong"><a style="text-decoration: none; color: whitesmoke" href="/users/<%= song.owner._id %>"><%= song.owner.username %></a></p>
   </div>
   <div class="songcard">
     <h1 class="artist"><%= song.artist %></h1>
@@ -11,52 +11,53 @@
     <h2 class="songword"><%= song.wordAssociation %></h2>
     <h2 class="songrank"><%= song.rank %></h2>
     <% if (song.owner.equals(user?._id)) { %>
-    <div>
-    <a href="/songs/<%= song._id %>/edit">
+      <div>
+      <a href="/songs/<%= song._id %>/edit">
       <button class="btnaddsong">Edit Song</button>
-    </a>
-    </div>
-    <div>
-    <form action="/songs/<%= song._id %>?_method=DELETE" method="POST">
-      <button type="submit" class="btnaddsong">X</button>
-    </form>
-    </div>
+      </a>
+      </div>
+      <div>
+        <form action="/songs/<%= song._id %>?_method=DELETE" method="POST">
+        <button type="submit" class="btnaddsong">X</button>
+        </form>
+      </div>
+      <textarea style="height: 40px; opacity: 0%; width: 210px" name="content"></textarea>
     <% } else { %>
-    <div class="commentbox">
+      <div class="commentbox">
       <form action="/songs/<%= song._id %>/comments" method="POST">
       <textarea style="height: 40px" name="content"></textarea> <br>
       <button class="btnaddsong" type="submit">Comment</button>
       </form> <br>
-    </div>
+      </div>
     <% } %>
   </div>
 
 <section class="comments">
-<h2 style="color: black;">Comments</h2>
-      <div class="comments2">
-        <div class="comments3">
-<% if (song.comments.length) { %>
-    <% song.comments?.forEach((comment) => { %>
-        <a style="text-decoration: none; color:whitesmoke" href="/users/<%= comment.author._id %>"><%= comment.author.username %></a>
-        <p class="date"><%= comment.createdAt.toDateString() %></p>
-        "<%= comment.content %>"
-        <br>
-        _____________________________________________
-        <br>
-      <% if (comment.author.equals(user?._id)) { %>
-        <div class="xcec">
-        <form action="/songs/<%= song._id %>/<%= comment._id %>?_method=DELETE" method="POST">
-          <button class="xc" type="submit">x</button>
-        </form>
-        <a href="/songs/<%= song._id %>/<%= comment._id %>/edit">
-          <button class="ec">Edit</button>
-        </a>
-        <% } %> 
-      </div>
-      </div>
-    <% }) %>
-  <% } else { %>
-  <h3>Be the first to comment</h3>
+  <h2 style="color: black;">Comments</h2>
+  <div class="comments2">
+    <div class="comments3">
+      <% if (song.comments.length) { %>
+        <% song.comments?.forEach((comment) => { %>
+          <a style="text-decoration: none; color:whitesmoke" href="/users/<%= comment.author._id %>"><%= comment.author.username %></a>
+          <p class="date"><%= comment.createdAt.toDateString() %></p>
+          "<%= comment.content %>"
+          <br>
+          <% if (comment.author.equals(user?._id)) { %>
+            <div class="xcec">
+            <form action="/songs/<%= song._id %>/<%= comment._id %>?_method=DELETE" method="POST">
+            <button class="xc" type="submit">x</button>
+            </form>
+            <a href="/songs/<%= song._id %>/<%= comment._id %>/edit">
+            <button class="ec">Edit</button>
+            </a>
+          <% } %> 
+            </div>
+          _____________________________________________
+          <br>
+    </div>
+        <% }) %>
+      <% } else { %>
+      <h3>Be the first to comment</h3>
     <% } %>
 </section>
 

@@ -1,0 +1,47 @@
+.signup {
+  border: solid;
+  width: 38vw;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 5%;
+  background-color: whitesmoke;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  margin-top: -10%;
+}
+
+.btnsignup {
+  background-color: #13262F;
+  color: white;
+  border-radius: 10%/50%;
+}
+
+.signuphover:hover {
+  border: 1mm ridge #FCB0B3;
+}
+
+.signin {
+  border: solid;
+  width: 30vw;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 5%;
+  background-color: whitesmoke;
+}
+
+.btnsignin {
+  background-color: #13262F;
+  color: white;
+  border-radius: 10%/50%;
+}

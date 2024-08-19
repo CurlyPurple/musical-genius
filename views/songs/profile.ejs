@@ -5,18 +5,18 @@
   <section class="mysongs">
     <div class="scrollme">
       <div class="eachsong">
-      <% songs.forEach( song =>  { %>
-        <% if(song.owner.equals(user?._id)) { %>
-          <section class="songtag">
-            <div><%= song.artist %></a></div>
-            <div><a style="color: whitesmoke;" href="/songs/<%= song._id %>"><%= song.title %></a></div>
-            <div class="toprank"><%= song.rank %></div>
-            <div class="topmood"><%= song.wordAssociation %></div>
+        <% songs.forEach( song =>  { %>
+          <% if(song.owner.equals(user?._id)) { %>
+            <section class="songtag">
+              <div><%= song.artist %></a></div>
+              <div><a style="color: whitesmoke;" href="/songs/<%= song._id %>"><%= song.title %></a></div>
+              <div class="toprank"><%= song.rank %></div>
+              <div class="topmood"><%= song.wordAssociation %></div>
             </section>
-        <% } %>
+          <% } %>
         <% } )  %>
       </div>
-      </div>
+    </div>
   </section>
 
   <section id="song-form">
@@ -43,7 +43,6 @@
 
   <section class="mycomments">
     <h4>My Song's Comments</h4>
-    <div class="scrollme2">
       <div class="content2">
         <% songs.forEach( song => { %>
           <% if(song.owner.equals(user?._id)) { %>
@@ -55,7 +54,6 @@
             <% } %>
         <% })  %>
       </div>
-    </div>
 </section>
 
 <%- include('../partials/footer') %>

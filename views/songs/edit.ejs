@@ -4,7 +4,7 @@
 <main>
   <div class="editsong">
     <h3>Edit your Song</h3>
-  <form id="new-song" action="/songs/<%= song._id %>?_method=PUT" method="POST">
+    <form id="new-song" action="/songs/<%= song._id %>?_method=PUT" method="POST">
     <label for="title-input">Song Title:</label>
     <input type="text" name="title" id="title-input" value="<%= song.title %>"><br>
     <label for="artist-input">Artist:</label><br>
@@ -14,9 +14,9 @@
     <label for="rank-input">Rank this song? (1 best)</label><br>
     <input type="number" name="rank" id="rank-input" min="1" max="5" value="<%= song.rank %>"> <br>
     <br>
-    <button class="btn" type="submit">Edit Song</button>
-  </form>
-</div>
+    <button class="btnaddsong" type="submit">Edit Song</button>
+    </form>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

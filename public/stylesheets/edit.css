@@ -1,0 +1,31 @@
+.editsong {
+  width: 200px;
+  height: 300px;
+  border-width: 250px;
+  border-color: black;
+  border: solid;
+  text-align: center;
+  margin-left: 3%;
+  border-radius: 5%;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 10px 10px 5px #FCB0B3;
+  margin-left: 37%;
+  margin-top: 10%;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30%;
+  margin-right: 30%;
+  box-shadow: 5px 3px 5px lightblue;
+}
+
+.btneditc {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 4%;
+  margin-top: -7%;
+}

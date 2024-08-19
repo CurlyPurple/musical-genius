@@ -2,23 +2,23 @@
 <%- include('../partials/nav') %>
 
 <section class="store">
-    <h2 style="color: whitesmoke;">Discover Songs</h2>
-    <div class="scroll">
+  <h2 style="color: whitesmoke;">Discover Songs</h2>
+  <div class="scroll">
     <div class="content">
-    <% songs.forEach( song => { %>
-    <% if(!(song.owner.equals(user?._id))) { %>
-    <a class="asongs" style="text-decoration: none;" href="/songs/<%= song._id %>">
+      <% songs.forEach( song => { %>
+        <% if(!(song.owner.equals(user?._id))) { %>
+        <a class="asongs" style="text-decoration: none;" href="/songs/<%= song._id %>">
         <div class="stag">
         <%= song.artist %><br>
         <br>
         <%= song.title %>
+        </div>
+        </a> 
+        <% } %>
+      <% })  %>
     </div>
-    </a> 
-    <% } %>
-    <% })  %>
-    </div>
-</div>
-<h3 style="color: whitesmoke">Click on a song to find out more</h3>
+  </div>
+  <h3 style="color: whitesmoke">Click on a song to find out more</h3>
 </section>
 
 <%- include('../partials/footer') %>

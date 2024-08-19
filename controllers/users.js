@@ -14,8 +14,6 @@ async function show(req, res) {
   const songs = await Song.find({})
   const selectedUser = await User.findById(req.params.userId)
   const selectedId = req.params.userId
-  console.log(selectedId);
-  
   if (selectedUser.equals(req.session.user._id)) {
     res.render('songs/profile', {
       selectedUser,

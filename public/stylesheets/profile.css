@@ -1,0 +1,147 @@
+.profilename {
+  text-shadow: 0 2px #13262F;
+  font-weight: bold;
+  color: #ed565b;
+  text-decoration: underline #13262F;
+  text-align: center;
+}
+
+.mysongs {
+  background-image: url('../assets/NightSky.webp');
+  background-size: cover;
+  width: 78vw;
+  height: 21vw;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 30px;
+  border-color: black;
+  border: solid;
+  box-shadow: 10px 10px 5px #FCB0B3;
+  position: relative;
+}
+
+.scrollme {
+  width: 78vw;
+  height: 20vw;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.eachsong {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollme4 > .eachsong {
+  margin-top: 5%;
+  width: 380vw;
+  height: 25vw;
+  width: fit-content;
+}
+
+.songtag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-radius: 5px;
+  width: 350px;
+  margin: 10px;
+  height: 130px;
+  padding: 10px;
+  box-shadow: 10px 10px 5px #FCB0B3;
+  font-family: 'Jersey 10';
+  color: whitesmoke;
+  font-size: 30px;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
+}
+
+.topmood {
+  position: relative;
+}
+
+.toprank > .songtag {
+  position: absolute;
+  font-size: 30px;
+}
+
+#song-form {
+  width: 200px;
+  height: 300px;
+  border-width: 250px;
+  border-color: black;
+  border: solid;
+  text-align: center;
+  margin-left: 3%;
+  border-radius: 5%;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
+  background-position: 600px ;
+  box-shadow: 10px 10px 5px #FCB0B3;
+  position: relative;
+}
+
+.btnaddsong {
+  background-color: #13262F;
+  color: white;
+  border-radius: 10%/50%;
+}
+
+.mycomments {
+  width: 48vw;
+  height: 32vw;
+  border: solid;
+  position: relative;
+  margin-left: 40%;
+  margin-top:-35.5%;
+  text-align: center;
+  border-radius: 5%;
+  overflow-x: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 5px #FCB0B3;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
+  background-position: 475px ;
+}
+
+.content2 {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  overflow-x: scroll;
+  overflow-x: hidden;
+}
+
+.title {
+  text-shadow: 0 2px #13262F;
+  font-weight: bold;
+  color: #ed565b;
+  text-align: center;
+  font-family: 'Jersey 10';
+  font-size: 60px;
+}
+
+.theirsongs {
+  width: 82vw;
+  background-image: url('../assets/NightSky.webp');
+  background-size: cover;
+  height: 30vw;
+  overflow-x: scroll;
+  border-radius: 5%;
+  margin-top: 5%;
+  margin-left: 2%;
+  border: solid;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: smaller;
+}
