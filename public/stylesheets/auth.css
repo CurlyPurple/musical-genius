@@ -1,16 +1,3 @@
-.signup {
-  border: solid;
-  width: 38vw;
-  height: 35vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  margin: auto;
-  margin-top: 5%;
-  background-color: whitesmoke;
-}
-
 .auth {
   display: flex;
   flex-direction: column;
@@ -38,10 +25,31 @@
   margin: auto;
   margin-top: 5%;
   background-color: whitesmoke;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
+}
+
+.signup {
+  border: solid;
+  width: 38vw;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 5%;
+  background-color: whitesmoke;
+  background-image: url('../assets/sunset.jpg');
+  background-size: cover;
 }
 
 .btn-signin {
   background-color: #13262F;
   color: white;
   border-radius: 10%/50%;
+}
+
+.h1-title {
+  color: whitesmoke;
 }
