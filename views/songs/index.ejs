@@ -7,7 +7,7 @@
     <div class="content">
       <% songs.forEach( song => { %>
         <% if (!(song.owner.equals(user?._id))) { %>
-        <a class="asongs" style="text-decoration: none;" href="/songs/<%= song._id %>">
+        <a class="a-songs" style="text-decoration: none;" href="/songs/<%= song._id %>">
         <div class="stag">
         <%= song.artist %><br>
         <br>

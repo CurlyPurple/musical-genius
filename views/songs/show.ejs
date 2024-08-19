@@ -1,32 +1,32 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section class="showview">
-  <div class="profilesongview">
-    <p class="usernamesong"><a style="text-decoration: none; color: whitesmoke" href="/users/<%= song.owner._id %>"><%= song.owner.username %></a></p>
+<section class="show-view">
+  <div class="profile-song-view">
+    <p class="username-song"><a style="text-decoration: none; color: whitesmoke" href="/users/<%= song.owner._id %>"><%= song.owner.username %></a></p>
   </div>
-  <div class="songcard">
+  <div class="song-card">
     <h1 class="artist"><%= song.artist %></h1>
     <h1 class="artist">🎶 <%= song.title %> 🎶</h1> 
-    <h2 class="songword"><%= song.wordAssociation %></h2>
-    <h2 class="songrank"><%= song.rank %></h2>
+    <h2 class="song-word"><%= song.wordAssociation %></h2>
+    <h2 class="song-rank"><%= song.rank %></h2>
     <% if (song.owner.equals(user?._id)) { %>
       <div>
       <a href="/songs/<%= song._id %>/edit">
-      <button class="btnaddsong">Edit Song</button>
+      <button class="btn-add-song">Edit Song</button>
       </a>
       </div>
       <div>
         <form action="/songs/<%= song._id %>?_method=DELETE" method="POST">
-        <button type="submit" class="btnaddsong">X</button>
+        <button type="submit" class="btn-add-song">X</button>
         </form>
       </div>
       <textarea style="height: 40px; opacity: 0%; width: 210px" name="content"></textarea>
     <% } else { %>
-      <div class="commentbox">
+      <div class="comment-box">
       <form action="/songs/<%= song._id %>/comments" method="POST">
       <textarea style="height: 40px" name="content"></textarea> <br>
-      <button class="btnaddsong" type="submit">Comment</button>
+      <button class="btn-add-song" type="submit">Comment</button>
       </form> <br>
       </div>
     <% } %>
@@ -43,12 +43,12 @@
           "<%= comment.content %>"
           <br>
           <% if (comment.author.equals(user?._id)) { %>
-            <div class="xcec">
+            <div class="both">
             <form action="/songs/<%= song._id %>/<%= comment._id %>?_method=DELETE" method="POST">
-            <button class="xc" type="submit">x</button>
+            <button class="x-comment" type="submit">x</button>
             </form>
             <a href="/songs/<%= song._id %>/<%= comment._id %>/edit">
-            <button class="ec">Edit</button>
+            <button class="e-comment">Edit</button>
             </a>
           <% } %> 
             </div>

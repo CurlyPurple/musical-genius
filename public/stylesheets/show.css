@@ -1,4 +1,4 @@
-.showview {
+.show-view {
   width: 82vw;
   height: 50vw;
   border: solid;
@@ -9,7 +9,7 @@
   box-shadow: 10px 10px 5px #FCECC9;
 }
 
-.profilesongview {
+.profile-song-view {
   width: 25vw;
   border: solid;
   height: 10vh;
@@ -27,12 +27,12 @@
   background-size: cover;
 }
 
-.usernamesong:hover {
+.username-song:hover {
   text-decoration: underline;
   color: whitesmoke;
 }
 
-.songcard {
+.song-card {
   width: fit-content;
   height: fit-content;
   border: solid;
@@ -50,21 +50,21 @@
   font-size: 20px;
 }
 
-.songword {
+.song-word {
   font-size: 30px;
   position: relative;
   margin-top: 20%;
   margin-left: -30%;
 }
 
-.songrank {
+.song-rank {
   font-size: 65px;
   position: relative;
   margin-left: 75%;
   margin-top: -40%;
 }
 
-.commentbox {
+.comment-box {
   position: relative;
   margin-top: 25%;
 }

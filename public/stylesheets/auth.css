@@ -17,13 +17,13 @@
   margin-top: -10%;
 }
 
-.btnsignup {
+.btn-signup {
   background-color: #13262F;
   color: white;
   border-radius: 10%/50%;
 }
 
-.signuphover:hover {
+.signup-hover:hover {
   border: 1mm ridge #FCB0B3;
 }
 
@@ -40,7 +40,7 @@
   background-color: whitesmoke;
 }
 
-.btnsignin {
+.btn-signin {
   background-color: #13262F;
   color: white;
   border-radius: 10%/50%;

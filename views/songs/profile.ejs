@@ -1,18 +1,18 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1 class="profilename"><%= selectedUser.username %>'s Profile</h1>
+<h1 class="profile-name"><%= selectedUser.username %>'s Profile</h1>
 <h2 class="quote">Expand Your Library, Inspire Others</h2>
-  <section class="mysongs">
-    <div class="scrollme">
-      <div class="eachsong">
+  <section class="my-songs">
+    <div class="scroll-me">
+      <div class="each-song">
         <% songs.forEach( song =>  { %>
           <% if(song.owner.equals(user?._id)) { %>
-            <section class="songtag">
+            <section class="song-tag">
               <div><%= song.artist %></a></div>
               <div><a style="color: whitesmoke;" href="/songs/<%= song._id %>"><%= song.title %></a></div>
-              <div class="toprank"><%= song.rank %></div>
-              <div class="topmood"><%= song.wordAssociation %></div>
+              <div class="top-rank"><%= song.rank %></div>
+              <div class="top-mood"><%= song.wordAssociation %></div>
             </section>
           <% } %>
         <% } )  %>
@@ -37,11 +37,11 @@
         <option value="5">5</option>
       </select>
         <br><br>
-      <button class="btnaddsong" type="submit">Add Song</button>
+      <button class="btn-add-song" type="submit">Add Song</button>
     </form>
   </section>
 
-  <section class="mycomments">
+  <section class="my-comments">
     <h4>My Song's Comments</h4>
       <div class="content2">
         <% songs.forEach( song => { %>

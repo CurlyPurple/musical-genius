@@ -1,17 +1,17 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1 class="profilename"><%= selectedUser.username %>'s Profile Page</h1>
-<section class="theirsongs">
-  <div class="scrollme4">
-    <div class="eachsong">
+<h1 class="profile-name"><%= selectedUser.username %>'s Profile Page</h1>
+<section class="their-songs">
+  <div class="scroll-me-4">
+    <div class="each-song">
       <% songs.forEach( song => { %>
         <% if(song.owner.equals(selectedUser?._id)) { %>
-          <section class="songtag">
+          <section class="song-tag">
           <div><%= song.artist %></a></div>
           <div><a style="color: whitesmoke;" href="/songs/<%= song._id %>"><%= song.title %></a></div>
-          <div class="toprank"><%= song.rank %></div>
-          <div class="topmood"><%= song.wordAssociation %></div>
+          <div class="top-rank"><%= song.rank %></div>
+          <div class="top-mood"><%= song.wordAssociation %></div>
           </section>
         <% } %>
       <% })  %>

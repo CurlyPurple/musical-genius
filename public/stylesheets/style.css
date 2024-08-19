@@ -131,7 +131,7 @@ p {
   font-size: 25px;
 }
 
-.xc {
+.x-comment {
   background-color: black;
   color: white;
   border-radius: 10%/50%;
@@ -139,7 +139,7 @@ p {
   margin-left: -90%;
 }
 
-.ec {
+.e-comment {
   background-color: black;
   color: white;
   border-radius: 10%/50%;
@@ -147,7 +147,7 @@ p {
   margin-left: 85%;
 }
 
-.xcec > .ec {
+.both > .ec {
   margin-top: -20%;
 }
 
@@ -162,7 +162,7 @@ p {
   border-radius: 10%/10%;
 }
 
-.navbar {
+.nav-bar {
   margin-top: -5%;
   margin-left: 0%;
   width: 95%;

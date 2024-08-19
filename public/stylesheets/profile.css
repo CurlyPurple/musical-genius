@@ -1,4 +1,4 @@
-.profilename {
+.profile-name {
   text-shadow: 0 2px #13262F;
   font-weight: bold;
   color: #ed565b;
@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.mysongs {
+.my-songs {
   background-image: url('../assets/NightSky.webp');
   background-size: cover;
   width: 78vw;
@@ -20,7 +20,7 @@
   position: relative;
 }
 
-.scrollme {
+.scroll-me {
   width: 78vw;
   height: 20vw;
   overflow: hidden;
@@ -33,21 +33,21 @@
   margin-top: -2%;
 }
 
-.eachsong {
+.each-song {
   width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.scrollme4 > .eachsong {
-  margin-top: 5%;
+.scroll-me-4 > .each-song {
+  margin-top: 3%;
   width: 380vw;
   height: 25vw;
   width: fit-content;
 }
 
-.songtag {
+.song-tag {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,11 +66,11 @@
   background-size: cover;
 }
 
-.topmood {
+.top-mood {
   position: relative;
 }
 
-.toprank > .songtag {
+.top-rank > .song-tag {
   position: absolute;
   font-size: 30px;
 }
@@ -91,13 +91,13 @@
   position: relative;
 }
 
-.btnaddsong {
+.btn-add-song {
   background-color: #13262F;
   color: white;
   border-radius: 10%/50%;
 }
 
-.mycomments {
+.my-comments {
   width: 48vw;
   height: 32vw;
   border: solid;
@@ -133,7 +133,7 @@
   font-size: 60px;
 }
 
-.theirsongs {
+.their-songs {
   width: 82vw;
   background-image: url('../assets/NightSky.webp');
   background-size: cover;
