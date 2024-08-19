@@ -2,6 +2,7 @@
 <%- include('../partials/nav') %>
 
 <h1 class="profilename"><%= selectedUser.username %>'s Profile</h1>
+<h2 class="quote">Expand Your Library, Inspire Others</h2>
   <section class="mysongs">
     <div class="scrollme">
       <div class="eachsong">
@@ -18,7 +19,6 @@
       </div>
     </div>
   </section>
-
   <section id="song-form">
     <h2>New Song</h2>
     <form id="new-song" action="/songs" method="POST">

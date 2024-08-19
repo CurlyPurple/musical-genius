@@ -27,6 +27,12 @@
   overflow-x: scroll;
 }
 
+.quote {
+  color: whitesmoke;
+  margin-bottom: 5%;
+  margin-top: -2%;
+}
+
 .eachsong {
   width: fit-content;
   display: flex;

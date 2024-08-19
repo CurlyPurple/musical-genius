@@ -10,7 +10,6 @@ Create an account on Musical Genius to build a library of your favorite songs. I
  * [Trello Board](https://trello.com/b/421KS9Ll/unit-2-project) (Planning Materials)
 
  ## Why Musical Genius:
-
  Music is a massive passion of mine. Different songs can bring different emotions and memories. They are a way to express your personality. One of the greatest feelings is showing a friend a song they have not heard before and having them relate to it in their own way. This brings that experience to another level.
 
 ## Attributions
@@ -31,3 +30,4 @@ Create an account on Musical Genius to build a library of your favorite songs. I
 * Add a friends (Entourage) feature where you can add users to your group and personally recommend them songs
 * You can add a song directly from the song show view
 * You can sort songs according to artist, mood, or rank
+* Duplicates of songs dont show up in index view
