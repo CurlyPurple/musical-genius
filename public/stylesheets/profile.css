@@ -7,16 +7,17 @@
 }
 
 .my-songs {
-  background-image: url('../assets/NightSky.webp');
-  background-size: cover;
   width: 78vw;
   height: 21vw;
   margin: 5% auto;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 5px;
   border-color: black;
   border: solid;
-  box-shadow: 10px 10px 5px #FCB0B3;
+  border-top-width: medium;
+  border-bottom-width: medium;
+  border-left-width: 0px;
+  border-right-width: 0px;
   position: relative;
 }
 
@@ -135,14 +136,16 @@
 
 .their-songs {
   width: 82vw;
-  background-image: url('../assets/NightSky.webp');
-  background-size: cover;
   height: 30vw;
   overflow-x: scroll;
   border-radius: 5%;
   margin-top: 5%;
   margin-left: 2%;
   border: solid;
+  border-top-width: medium;
+  border-bottom-width: medium;
+  border-left-width: 0px;
+  border-right-width: 0px;
 }
 
 .profile {
