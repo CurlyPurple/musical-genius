@@ -23,6 +23,9 @@ Create an account on Musical Genius to build a library of your favorite songs. I
 ![CSS logo](./public/assets/CSS.png)
 ![Javascript logo](./public/assets/Javascript.png)
 ![HTML5 logo](./public/assets/HTML5.png)
+![Mongoose logo](./public/assets/mongoose.png)
+![Express logo](./public/assets/express.png)
+![Node logo](./public/assets/node.png)
 ![Heroku logo](./public/assets/heroku2.png)
 
 ## Stretch Goals:
